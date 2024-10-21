@@ -7,7 +7,7 @@ public class TextBook extends Book {
 	
 	// TODO: Change the constructor if required? Correct any errors
 	public TextBook(String subject) {
-		super(subject);
+		this.subject=subject;
 	}
 
 	// TODO : create a getter if required.
