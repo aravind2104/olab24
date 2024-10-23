@@ -3,7 +3,7 @@ package oldshelf;
 public class TextBook extends Book {
 
 	// TODO: Make this a final field with most strict visiibility possible.
-	private String final subject;
+	private final String subject;
 	
 	// TODO: Change the constructor if required? Correct any errors
 	public TextBook(String subject) {
