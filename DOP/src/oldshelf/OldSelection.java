@@ -18,7 +18,7 @@ public class OldSelection {
 				return f.getName();
 			}
 			if(o instanceof TextBook t){
-				return t.getSubject();
+				return t.subject();
 			}	
 		}
 		return "";
