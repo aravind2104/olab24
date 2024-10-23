@@ -9,10 +9,11 @@ public class Fiction extends Book {
 	 * type is  a per instance object and it is initialized only once.
 	 * 
 	 */
-	private static final FictionType type;
+	private final FictionType type;
+	
 	public Fiction(String name, FictionType ft) {
 		this.name=name;
-		Fiction.type=f;
+		this.type=ft;
 		// TODO  correct the above.
 	}
 	
@@ -20,7 +21,7 @@ public class Fiction extends Book {
 		return name;
 	}
 	
-	public static FictionType getType(){
+	public FictionType getType(){
 		return type;
 	}
 

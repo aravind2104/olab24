@@ -21,7 +21,7 @@ public class OldSelection {
 				return t.getSubject();
 			}	
 		}
-		else return "";
+		return "";
 	}
 
 	public static void main(String[] args) {
