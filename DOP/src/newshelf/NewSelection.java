@@ -13,16 +13,12 @@ public class NewSelection {
 	 */
 	public static String getAgeOrTitle(Object o) {
 		
-		if (o instanceof Comic c) {
-			return c.getTitle();
-		}
-		if (o instanceof TextBook t){
-			return t.getTitle();
-		}
-		if(o instanceof Fiction f){
-			return f.getTitle();
-		}
-		return null;
+		return switch(o) {
+			case Comic c when c.getTitle() != null -> c.getTitle();
+			case Fiction f when f.getTitle() != null -> f.getTitle();
+			case TextBook t when t.getTitle() != null -> t.subject();
+			default -> "";
+		};
 	}
 
 	public static void main(String[] args) {
