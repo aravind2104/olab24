@@ -14,9 +14,9 @@ public class NewSelection {
 	public static String getAgeOrTitle(Object o) {
 		
 		return switch(o) {
-			case Comic c when c.getTitle() != null -> c.getTitle();
-			case Fiction f when f.getTitle() != null -> f.getTitle();
-			case TextBook t when t.getTitle() != null -> t.subject();
+			case Comic(String title, int age) -> title;
+			case Fiction(String name,FictionType type) -> name;
+			case TextBook(String subject) ->subject;
 			default -> "";
 		};
 	}
